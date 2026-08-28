@@ -1,0 +1,905 @@
+/* ==========================================
+   BALAJI MOBILE — MAIN STYLES
+   ========================================== */
+
+
+/* ==========================================
+   1. GLOBAL SETTINGS
+   ========================================== */
+
+/*
+   These variables let us control the entire
+   website's color palette from one place.
+
+   If the owner later says:
+   "Make it green instead of blue"
+
+   we only need to change these colors.
+*/
+
+:root {
+  --blue: #1769ff;
+  --blue-dark: #0d47c9;
+  --blue-light: #eef4ff;
+
+  --orange: #ff8a00;
+  --orange-light: #fff3e3;
+
+  --black: #111827;
+  --gray-dark: #4b5563;
+  --gray: #6b7280;
+  --gray-light: #e5e7eb;
+
+  --background: #ffffff;
+  --background-soft: #f8fafc;
+}
+
+
+/*
+   Remove browser's default spacing.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*
+   Basic page settings.
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
+  background: var(--background);
+}
+
+
+a {
+  color: inherit;
+}
+
+
+/* ==========================================
+   2. NAVIGATION
+   ========================================== */
+
+.navbar {
+  height: 72px;
+
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: white;
+
+  border-bottom: 1px solid var(--gray-light);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+}
+
+
+/*
+   Business name.
+*/
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+
+/*
+   Makes MOBILE blue.
+*/
+
+.logo span {
+  color: var(--blue);
+}
+
+
+/*
+   Navigation links.
+*/
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+
+  color: var(--gray-dark);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+
+/* ==========================================
+   3. HERO SECTION
+   ========================================== */
+
+.hero {
+  min-height: 620px;
+
+  padding: 90px 7%;
+
+  /* Put the content in the middle vertically */
+  display: flex;
+  align-items: center;
+
+  /* Put the content in the middle horizontally */
+  justify-content: center;
+
+  background: var(--blue-light);
+
+  /* Center the text */
+  text-align: center;
+}
+.hero-content {
+  max-width: 760px;
+
+  /* Make sure the whole hero block is centered */
+  margin: 0 auto;
+}
+
+
+/*
+   Small heading above the main heading.
+*/
+
+.hero-label,
+.section-label {
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+
+  color: var(--blue);
+
+  margin-bottom: 18px;
+}
+
+
+.hero h1 {
+  font-size: clamp(52px, 7vw, 88px);
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+
+  margin-bottom: 28px;
+}
+
+
+/*
+   Second line of hero heading.
+*/
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+.hero-description {
+  max-width: 570px;
+
+  font-size: 19px;
+
+  line-height: 1.6;
+
+  color: var(--gray-dark);
+
+  /* Centers the description box */
+  margin: 0 auto 25px;
+}
+
+
+/* ==========================================
+   4. RATING
+   ========================================== */
+
+.rating {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+.rating strong {
+  color: var(--orange);
+
+  font-size: 20px;
+}
+
+
+.rating span {
+  color: var(--gray-dark);
+
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   5. BUTTONS
+   ========================================== */
+
+.hero-buttons,
+.contact-buttons {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  /* Center the buttons */
+  justify-content: center;
+}
+
+
+.button {
+  display: inline-block;
+
+  padding: 14px 22px;
+
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+
+/*
+   Main blue button.
+*/
+
+.button-primary {
+  background: var(--blue);
+
+  color: white;
+}
+
+
+.button-primary:hover {
+  background: var(--blue-dark);
+}
+
+
+/*
+   Secondary white button.
+*/
+
+.button-secondary {
+  background: white;
+
+  color: var(--black);
+
+  border: 1px solid var(--gray-light);
+}
+
+
+/* ==========================================
+   6. GENERAL SECTIONS
+   ========================================== */
+
+.services,
+.why-us,
+.reviews,
+.process,
+.contact {
+  padding: 90px 7%;
+}
+
+
+.section-heading {
+  max-width: 650px;
+
+  margin-bottom: 50px;
+}
+
+
+.section-heading h2 {
+  font-size: clamp(36px, 5vw, 54px);
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 18px;
+}
+
+
+.section-heading > p:last-child {
+  color: var(--gray);
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   7. SERVICES
+   ========================================== */
+
+.services {
+  background: white;
+}
+
+
+.service-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+}
+
+
+.service-card {
+  padding: 30px;
+
+  background: var(--background-soft);
+
+  border: 1px solid var(--gray-light);
+
+  border-radius: 10px;
+
+  transition: 0.2s;
+}
+
+
+.service-card:hover {
+  border-color: var(--blue);
+
+  transform: translateY(-3px);
+}
+
+
+/*
+   These are our temporary CSS icons.
+
+   We will replace these with proper icons
+   shortly.
+*/
+
+.service-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  margin-bottom: 20px;
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+
+/*
+   Different colors for different services.
+*/
+
+.screen-icon {
+  color: var(--blue);
+
+  background: var(--blue-light);
+}
+
+
+.battery-icon {
+  color: #16a34a;
+
+  background: #ecfdf3;
+}
+
+
+.charge-icon {
+  color: var(--orange);
+
+  background: var(--orange-light);
+}
+
+
+.repair-icon {
+  color: #7c3aed;
+
+  background: #f3e8ff;
+}
+
+
+.water-icon {
+  color: #0891b2;
+
+  background: #ecfeff;
+}
+
+
+.software-icon {
+  color: #db2777;
+
+  background: #fce7f3;
+}
+
+
+.service-card h3 {
+  font-size: 19px;
+
+  margin-bottom: 10px;
+}
+
+
+.service-card p {
+  color: var(--gray);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   8. WHY US
+   ========================================== */
+
+.why-us {
+  background: var(--background-soft);
+}
+
+
+.trust-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 35px;
+}
+
+
+.trust-item {
+  display: flex;
+
+  gap: 16px;
+}
+
+
+.check {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--blue);
+
+  color: white;
+
+  font-weight: 800;
+}
+
+
+.trust-item h3 {
+  font-size: 17px;
+
+  margin-bottom: 7px;
+}
+
+
+.trust-item p {
+  color: var(--gray);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   9. REVIEWS
+   ========================================== */
+
+.reviews {
+  text-align: center;
+}
+
+
+.reviews .section-heading {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.rating-box {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 20px 30px;
+
+  margin-bottom: 45px;
+
+  border-radius: 10px;
+
+  background: var(--orange-light);
+}
+
+
+.rating-number {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: var(--orange);
+}
+
+
+.stars {
+  color: var(--orange);
+
+  letter-spacing: 2px;
+}
+
+
+.rating-box p {
+  color: var(--gray);
+
+  font-size: 13px;
+
+  margin-top: 5px;
+}
+
+
+.review-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+
+  text-align: left;
+}
+
+
+.review-card {
+  padding: 28px;
+
+  border: 1px solid var(--gray-light);
+
+  border-radius: 10px;
+
+  background: white;
+}
+
+
+.review-card p {
+  color: var(--gray-dark);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  margin: 18px 0;
+}
+
+
+.review-card strong {
+  font-size: 13px;
+}
+
+
+.google-link,
+.map-link {
+  display: inline-block;
+
+  margin-top: 35px;
+
+  color: var(--blue);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.google-link:hover,
+.map-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   10. PROCESS
+   ========================================== */
+
+.process {
+  background: var(--blue-light);
+}
+
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+
+.process-step span {
+  color: var(--blue);
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+.process-step h3 {
+  margin: 15px 0 8px;
+
+  font-size: 18px;
+}
+
+
+.process-step p {
+  color: var(--gray);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   11. CONTACT
+   ========================================== */
+
+.contact {
+  background: var(--black);
+
+  color: white;
+}
+
+
+.contact-content {
+  max-width: 800px;
+}
+
+
+.contact .section-label {
+  color: #60a5fa;
+}
+
+
+.contact h2 {
+  font-size: clamp(45px, 6vw, 70px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 20px;
+}
+
+
+.contact-content > p:not(.section-label) {
+  color: #9ca3af;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+
+  margin-bottom: 30px;
+}
+
+
+.contact .button-secondary {
+  background: transparent;
+
+  color: white;
+
+  border-color: #374151;
+}
+
+
+.shop-info {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  margin-top: 70px;
+
+  padding-top: 35px;
+
+  border-top: 1px solid #374151;
+}
+
+
+.shop-info strong {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+}
+
+
+.shop-info p {
+  color: #9ca3af;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ==========================================
+   12. FOOTER
+   ========================================== */
+
+footer {
+  padding: 35px 7%;
+
+  background: var(--black);
+
+  color: white;
+
+  border-top: 1px solid #374151;
+}
+
+
+footer p {
+  color: #6b7280;
+
+  font-size: 13px;
+
+  margin-top: 7px;
+}
+
+
+/* ==========================================
+   13. TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  .service-grid,
+  .review-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* ==========================================
+   14. MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+
+  /*
+     Hide desktop navigation on phones.
+
+     We'll eventually replace this with a
+     proper mobile menu.
+  */
+
+  .nav-links {
+    display: none;
+  }
+
+
+  .hero {
+    min-height: 570px;
+
+    padding: 75px 5%;
+  }
+
+
+  .hero h1 {
+    font-size: 55px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+
+  .services,
+  .why-us,
+  .reviews,
+  .process,
+  .contact {
+    padding: 75px 5%;
+  }
+
+
+  .service-grid,
+  .review-grid,
+  .trust-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .shop-info {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  .rating-box {
+    padding: 18px 22px;
+  }
+
+}
